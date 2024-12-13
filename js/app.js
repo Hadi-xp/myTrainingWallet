@@ -13,6 +13,16 @@ if(totalIncome !== ''){
     }
 }
 
+const btn = document.querySelector('.btn-primary');
+btn.addEventListener('click',(e)=>{
+    e.preventDefault();
+    const expense = document.querySelector('#expense').value;
+    const amount = document.querySelector('#amount').value;
+    console.log(expense);
+    console.log(amount);
+})
+
+
 
 
 
