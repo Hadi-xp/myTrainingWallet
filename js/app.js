@@ -1,4 +1,4 @@
-let totalIncome = Number(prompt('Please Add Your Weekly Income'));
+let totalIncome = Number(prompt('لطفا مجموع درآمد خود را وارد کنید'));
 let left = document.querySelector('#left')
 
 if(totalIncome !== ''){
@@ -6,7 +6,7 @@ if(totalIncome !== ''){
     left.textContent = totalIncome;
 }else{
     while(totalIncome == ''){
-        totalIncome = prompt('Please Add Your Weekly Income');
+        totalIncome = prompt('لظفا مجموع درآمد خود را وارد کنید');
         if(totalIncome !== ''){
             document.querySelector('#total').textContent = totalIncome;
             left.textContent = totalIncome
@@ -22,7 +22,7 @@ btn.addEventListener('click',(e)=>{
     let numberAmount = Number(amount);
     let leftNumber = Number(left.textContent);
     if(expense == '' || amount == ''){
-        alert('Please Fill All Fields');
+        alert('تمامی فیلدها را پر کنید');
     }else{
         const ul = document.querySelector('.list-group');
         const li = document.createElement('li');
