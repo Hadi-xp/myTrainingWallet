@@ -1,15 +1,15 @@
-let totalIncome = prompt('Please Add Your Weekly Income');
- 
+let totalIncome = Number(prompt('Please Add Your Weekly Income'));
+let left = document.querySelector('#left')
 
 if(totalIncome !== ''){
     document.querySelector('#total').textContent = totalIncome;
-    document.querySelector('#left').textContent = totalIncome
+    left.textContent = totalIncome;
 }else{
     while(totalIncome == ''){
         totalIncome = prompt('Please Add Your Weekly Income');
         if(totalIncome !== ''){
             document.querySelector('#total').textContent = totalIncome;
-            document.querySelector('#left').textContent = totalIncome
+            left.textContent = totalIncome
         }
     }
 }
@@ -17,22 +17,25 @@ if(totalIncome !== ''){
 const btn = document.querySelector('.btn-primary');
 btn.addEventListener('click',(e)=>{
     e.preventDefault();
-    const expense = document.querySelector('#expense');
-    const amount = document.querySelector('#amount');
-    if(expense.value == '' || amount.value == ''){
+    let expense = document.querySelector('#expense').value;
+    let amount = document.querySelector('#amount').value;
+    let numberAmount = Number(amount);
+    let leftNumber = Number(left.textContent);
+    if(expense == '' || amount == ''){
         alert('Please Fill All Fields');
     }else{
         const ul = document.querySelector('.list-group');
         const li = document.createElement('li');
         const span = document.createElement('span');
         const span2 = document.createElement('span');
-        span.textContent = expense.value;
-        span2.textContent = amount.value;
+        span.textContent = expense;
+        span2.textContent = amount;
         li.appendChild(span);
         li.appendChild(span2);
         ul.appendChild(li);
-        expense.value = '';
-        amount.value = '';
+        left.textContent = leftNumber - numberAmount;
+        expense = '';
+        amount = '';
     }
   
    
