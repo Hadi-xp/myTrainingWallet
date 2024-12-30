@@ -29,7 +29,6 @@ btn.addEventListener('click',(e)=>{
         li.classList.add('myLi');
         const span = document.createElement('span');
         const span2 = document.createElement('span');
-        const deleteBtn = document.createElement('a');
         deleteBtn.classList.add('delete');
         span.textContent = expense;
         span2.textContent = amount;
@@ -42,13 +41,10 @@ btn.addEventListener('click',(e)=>{
         left.textContent = leftNumber - numberAmount;
         expense = '';
         amount = '';
-
-        // save to local storage
-        
     }
-  
-   
 })
+
+
 
 
 
