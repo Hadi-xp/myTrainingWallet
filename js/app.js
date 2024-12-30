@@ -26,16 +26,25 @@ btn.addEventListener('click',(e)=>{
     }else{
         const ul = document.querySelector('.list-group');
         const li = document.createElement('li');
+        li.classList.add('myLi');
         const span = document.createElement('span');
         const span2 = document.createElement('span');
+        const deleteBtn = document.createElement('a');
+        deleteBtn.classList.add('delete');
         span.textContent = expense;
         span2.textContent = amount;
+        deleteBtn.textContent = 'X';
+        deleteBtn.href = '#';
         li.appendChild(span);
         li.appendChild(span2);
+        li.appendChild(deleteBtn);
         ul.appendChild(li);
         left.textContent = leftNumber - numberAmount;
         expense = '';
         amount = '';
+
+        // save to local storage
+        
     }
   
    

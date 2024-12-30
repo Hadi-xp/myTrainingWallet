@@ -1,0 +1,22 @@
+.myLi{
+    background-color: rgb(118, 165, 165);
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+    font-size: 18px;
+}
+
+.delete{
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    text-decoration: none;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 20px;
+    &:hover{
+        text-decoration: none;
+        color: rgb(0, 0, 0);
+    }
+}
