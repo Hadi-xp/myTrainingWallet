@@ -1,18 +1,37 @@
-let totalIncome = Number(prompt('لطفا مجموع درآمد خود را وارد کنید'));
-let left = document.querySelector('#left')
+// let totalIncome = Number(prompt('لطفا مجموع درآمد خود را وارد کنید'));
+// let left = document.querySelector('#left')
 
-if(totalIncome !== ''){
+// if(totalIncome !== ''){
+//     document.querySelector('#total').textContent = totalIncome;
+//     left.textContent = totalIncome;
+// }else{
+//     while(totalIncome == ''){
+//         totalIncome = prompt('لظفا مجموع درآمد خود را وارد کنید');
+//         if(totalIncome !== ''){
+//             document.querySelector('#total').textContent = totalIncome;
+//             left.textContent = totalIncome
+//         }
+//     }
+// }
+const StartBtn = document.querySelector('.Sbtn');
+StartBtn.addEventListener('click',(e)=>{
+    e.preventDefault();
+    let totalIncome = Number(prompt('لطفا مجموع درآمد خود را وارد کنید'));
+    let left = document.querySelector('#left')
+
+    if(totalIncome !== ''){
     document.querySelector('#total').textContent = totalIncome;
     left.textContent = totalIncome;
-}else{
-    while(totalIncome == ''){
+    }else{
+        while(totalIncome == ''){
         totalIncome = prompt('لظفا مجموع درآمد خود را وارد کنید');
         if(totalIncome !== ''){
             document.querySelector('#total').textContent = totalIncome;
             left.textContent = totalIncome
+            }
         }
     }
-}
+})
 
 const btn = document.querySelector('.btn-primary');
 btn.addEventListener('click',(e)=>{
@@ -29,6 +48,7 @@ btn.addEventListener('click',(e)=>{
         li.classList.add('myLi');
         const span = document.createElement('span');
         const span2 = document.createElement('span');
+        const deleteBtn = document.createElement('a');
         deleteBtn.classList.add('delete');
         span.textContent = expense;
         span2.textContent = amount;
